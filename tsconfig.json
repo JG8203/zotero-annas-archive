@@ -1,33 +1,5 @@
 {
-  "compilerOptions": {
-    "importHelpers": true,
-    "target": "es2017",
-    "disableSizeLimit": true,
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "removeComments": false,
-    "preserveConstEnums": false,
-    "sourceMap": true,
-    "downlevelIteration": true,
-      "strict": true,
-      "noImplicitReturns": true,
-      "noImplicitAny": false,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-    "lib": [ "es2017", "dom" ],
-    "typeRoots": [
-      "./typings",
-      "./node_modules/@types"
-    ]
-  },
-  "include": [
-    "content/**/*",
-    "resource/**/*",
-    "tests/**/*",
-    "*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "typings/*"
-  ]
+  "extends": "zotero-types/entries/sandbox/",
+  "include": ["src", "typings"],
+  "exclude": [".scaffold", "build", "addon", "node_modules"]
 }

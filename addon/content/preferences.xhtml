@@ -1,0 +1,78 @@
+<linkset>
+  <html:link rel="localization" href="__addonRef__-preferences.ftl" />
+</linkset>
+<vbox onload="Zotero.__addonInstance__.hooks.onPrefsEvent('load', { window })">
+  <groupbox>
+    <label><html:h2 data-l10n-id="pref-title"></html:h2></label>
+
+    <hbox align="center">
+      <html:label
+        for="zotero-prefpane-__addonRef__-endpoint"
+        data-l10n-id="pref-endpoint"
+      ></html:label>
+      <html:input
+        type="text"
+        id="zotero-prefpane-__addonRef__-endpoint"
+        preference="__prefsPrefix__.endpoint"
+        flex="1"
+      ></html:input>
+    </hbox>
+  </groupbox>
+
+  <groupbox>
+    <label><html:h2 data-l10n-id="pref-backup-mirrors"></html:h2></label>
+    <html:label data-l10n-id="pref-backup-mirrors-help"></html:label>
+    <html:textarea
+      id="zotero-prefpane-__addonRef__-backupMirrors"
+      rows="6"
+      cols="60"
+      style="width: 100%; font-family: monospace"
+    ></html:textarea>
+  </groupbox>
+
+  <groupbox>
+    <hbox align="center">
+      <html:label
+        for="zotero-prefpane-__addonRef__-autoDiscoverMirrors"
+        data-l10n-id="pref-auto-discover-mirrors"
+      ></html:label>
+      <html:input
+        type="checkbox"
+        id="zotero-prefpane-__addonRef__-autoDiscoverMirrors"
+        preference="__prefsPrefix__.autoDiscoverMirrors"
+      ></html:input>
+    </hbox>
+    <hbox align="center">
+      <html:label
+        for="zotero-prefpane-__addonRef__-automaticPdfDownload"
+        data-l10n-id="pref-automatic-pdf-download"
+      ></html:label>
+      <html:input
+        type="checkbox"
+        id="zotero-prefpane-__addonRef__-automaticPdfDownload"
+        preference="__prefsPrefix__.automaticPdfDownload"
+      ></html:input>
+    </hbox>
+  </groupbox>
+
+  <groupbox>
+    <label><html:h2 data-l10n-id="pref-secret-key"></html:h2></label>
+    <html:label data-l10n-id="pref-secret-key-help"></html:label>
+    <hbox align="center">
+      <html:input
+        type="password"
+        id="zotero-prefpane-__addonRef__-secretKey"
+        preference="__prefsPrefix__.secretKey"
+        flex="1"
+        autocomplete="off"
+      ></html:input>
+    </hbox>
+  </groupbox>
+
+  <html:label data-l10n-id="pref-find-full-text"></html:label>
+
+  <html:label
+    data-l10n-id="pref-help"
+    data-l10n-args='{"time":"__buildTime__","version":"__buildVersion__"}'
+  ></html:label>
+</vbox>

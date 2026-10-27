@@ -1,6 +1,8 @@
 wiki
 gen
 build
+.scaffold
+.swc-cache
 *~
 *.swp
 *.debug
@@ -17,3 +19,5 @@ node_modules
 .eslintcache
 coverage
 .nyc_output
+logs
+*.log

@@ -1,0 +1,10 @@
+pref-title = Anna's Archive Settings
+pref-endpoint = Preferred SciDB endpoint
+pref-backup-mirrors = Backup mirrors
+pref-backup-mirrors-help = Tried in order after the preferred endpoint. One URL per line (https://annas-archive.pk is fine — /scidb/ is added automatically).
+pref-auto-discover-mirrors = Also auto-discover extra mirrors online
+pref-automatic-pdf-download = Automatically download PDFs for new items
+pref-secret-key = Membership secret key
+pref-secret-key-help = From your Anna’s Archive account page. Enables the official fast-download API (DOI → MD5 → direct URL) and skips the public bot-check. Stored in this Zotero profile; never sent to auto-discovered extra mirrors.
+pref-find-full-text = With a membership key, Find Full Text uses member fast downloads after publisher/OA sources. Without a key it falls back to SciDB page scraping (bot-check may still apply).
+pref-help = Build { $version } · { $time }

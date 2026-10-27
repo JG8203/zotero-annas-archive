@@ -1,57 +1,58 @@
 {
-  "name": "zotero-scihub",
-  "version": "1.4.4",
-  "description": "Download papers and books by DOI from Sci-Hub",
-  "scripts": {
-    "lint": "eslint . --ext .ts --cache --cache-location .eslintcache/",
-    "prebuild": "npm run lint",
-    "build": "tsc --noEmit && node esbuild.js",
-    "postbuild": "zotero-plugin-zipup build zotero-scihub",
-    "release": "zotero-plugin-release",
-    "postversion": "git push --follow-tags",
-    "test": "nyc mocha -r ts-node/register 'tests/**/*.ts'",
-    "coverage": "nyc -r lcov npm run test"
+  "name": "zotero-annas-archive",
+  "version": "3.0.1",
+  "description": "Download PDFs for Zotero items by DOI from Anna's Archive SciDB",
+  "type": "module",
+  "config": {
+    "addonName": "Anna's Archive for Zotero",
+    "addonID": "zotero-annas-archive@jg8203.github.io",
+    "addonRef": "annasarchive",
+    "addonInstance": "AnnasArchive",
+    "prefsPrefix": "extensions.zotero.annasarchive"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ethanwillis/zotero-scihub.git"
+    "url": "git+https://github.com/janbaykara/zotero-annas-archive.git"
   },
-  "author": {
-    "name": "ethanwillis",
-    "email": "example@example.com"
-  },
+  "author": "JG8203",
   "bugs": {
-    "url": "https://github.com/ethanwillis/zotero-scihub/issues"
+    "url": "https://github.com/janbaykara/zotero-annas-archive/issues"
   },
-  "homepage": "https://github.com/ethanwillis/zotero-scihub",
-  "xpi": {
-    "name": "Sci-Hub Plugin for Zotero",
-    "updateLink": "https://github.com/ethanwillis/zotero-scihub/releases/download/v{version}/zotero-scihub-{version}.xpi",
-    "releaseURL": "https://github.com/ethanwillis/zotero-scihub/releases/download/release/",
-    "iconURL": "chrome://zotero-scihub/skin/sci-hub-logo.svg"
+  "homepage": "https://github.com/janbaykara/zotero-annas-archive#readme",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "start": "zotero-plugin serve",
+    "build": "zotero-plugin build && tsc --noEmit",
+    "lint:check": "prettier --check . && eslint .",
+    "lint:fix": "prettier --write . && eslint . --fix",
+    "release": "zotero-plugin release",
+    "update-deps": "npm update --save"
+  },
+  "dependencies": {
+    "zotero-plugin-toolkit": "^5.1.0-beta.13"
   },
   "devDependencies": {
-    "@istanbuljs/nyc-config-typescript": "^1.0.1",
-    "@types/chai": "^4.2.21",
-    "@types/mocha": "^8.2.3",
-    "@types/node": "^16.4.1",
-    "@typescript-eslint/eslint-plugin": "^4.28.3",
-    "@typescript-eslint/parser": "^4.28.3",
-    "chai": "^4.3.4",
-    "esbuild": "^0.12.15",
-    "eslint": "^7.30.0",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jsdoc": "^35.4.3",
-    "eslint-plugin-prefer-arrow": "^1.2.3",
-    "jsdom": "^17.0.0",
-    "mkdirp": "^1.0.4",
-    "mocha": "^9.0.3",
-    "nyc": "^15.1.0",
-    "rimraf": "^3.0.2",
-    "sinon": "^11.1.2",
-    "source-map-support": "^0.5.19",
-    "ts-node": "^10.1.0",
-    "typescript": "^4.3.5",
-    "zotero-plugin": "^1.2.1"
+    "@types/node": "^24.10.0",
+    "@zotero-plugin/eslint-config": "^0.6.7",
+    "eslint": "^9.39.2",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3",
+    "zotero-plugin-scaffold": "^0.8.2",
+    "zotero-types": "^4.1.0-beta.4"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "endOfLine": "lf",
+    "overrides": [
+      {
+        "files": [
+          "*.xhtml"
+        ],
+        "options": {
+          "htmlWhitespaceSensitivity": "css"
+        }
+      }
+    ]
   }
 }

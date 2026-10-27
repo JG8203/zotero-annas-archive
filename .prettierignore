@@ -1,0 +1,6 @@
+.scaffold
+build
+dist
+node_modules
+package-lock.json
+*.xpi

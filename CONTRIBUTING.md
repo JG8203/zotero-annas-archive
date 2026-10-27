@@ -1,7 +1,6 @@
 # Contributing
 
-This project is run by the individual contributors benefitting everybody. Be mindfult that there are multiple mirrors with different response formats and error handling capabilities, project should aim to support as many of them as possible. Every contribution is welcome, but you can do a few things to expedite merging of your pull request:
-
-0. This repo uses automated testing, run it with `npm run test`
-1. Test change manually
-2. Open PR, provide brief decsription of the change and the way you have tested it
+1. Install dependencies with `npm install`
+2. Run `npm start` for a local development build with hot reload
+3. Run `npm run build` before opening a PR to confirm the production build succeeds
+4. Keep changes focused; match existing TypeScript and Fluent conventions

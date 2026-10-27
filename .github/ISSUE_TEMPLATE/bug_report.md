@@ -1,20 +1,20 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
-
+title: ""
+labels: ""
+assignees: ""
 ---
 
 **Describe the bug**
 A clear and concise description of what the bug is.
 
 **Version info**
-Which versions of Zotero, Zotero-Scihub, and Scihub mirror are you using.
+Which versions of Zotero, this plugin, and SciDB endpoint/mirror are you using.
 
 **To Reproduce**
 Steps to reproduce the behavior:
+
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
